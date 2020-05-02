@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      let $ = require("jquery");
+    </script>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./styles/terminal.css" />
+    <title>Terminal</title>
+    <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="script-src 'self' 'unsafe-inline';"
+    />
+  </head>
+  <body>
+    <div id="terminal"></div>
+    <div id="input">
+      <div id="input-content">Temp</div>
+    <div id="input-input" contenteditable="true">last line</div>
+  </div>
+  <div id='padder'></div>
+    <script>
+      if (typeof module === "object") {
+        window.module = module;
+        module = undefined;
+      }
+    </script>
+
+    <!-- normal script imports etc  -->
+    <script src="./scripts/dispatcher.js"></script>
+
+    <!-- Insert this line after script imports -->
+    <script>
+      if (window.module) module = window.module;
+    </script>
+  </body>
+</html>
