@@ -14,7 +14,7 @@
   "dependencies": {
     "ansi-html": "0.0.7",
     "ansi-to-html": "^0.6.14",
-    "ansi_up": "^4.0.4",
+    "ansi_up": "^5.0.0",
     "jquery": "^3.5.0",
     "jsdom": "^16.2.2",
     "ssh2": "^0.8.9",
